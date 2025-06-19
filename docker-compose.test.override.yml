@@ -1,5 +1,12 @@
 services:
   netbox:
     ports:
-      - "127.0.0.1:8000:8080"
+      - "32768:8080"
+    environment:
+      SKIP_SUPERUSER: "false"
+      SUPERUSER_API_TOKEN: "0123456789abcdef0123456789abcdef01234567"
+      SUPERUSER_EMAIL: "not@me.com"
+      SUPERUSER_NAME: "admin"
+      SUPERUSER_PASSWORD: "admin"
+
 
