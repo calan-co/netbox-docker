@@ -15,4 +15,4 @@ jobs:
   container:
     uses: calan-co/cicd-shared-pipeline/.github/workflows/reusable-container-ci.yml@v1
     with:
-      build-command: docker build --tag calan-co/netbox-docker:ci .
+      build-command: docker build --build-arg FROM=docker.io/ubuntu:24.04 --tag calan-co/netbox-docker:ci .
