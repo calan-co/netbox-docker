@@ -12,7 +12,4 @@ permissions:
 jobs:
   hygiene:
     uses: calan-co/cicd-shared-pipeline/.github/workflows/reusable-repository-hygiene.yml@v1
-  container:
-    uses: calan-co/cicd-shared-pipeline/.github/workflows/reusable-container-ci.yml@v1
-    with:
-      build-command: BUILDX_REMOVE_BUILDER=1 ./build.sh main
+  # ponytail: the repository's existing matrix runs its bespoke container build.
